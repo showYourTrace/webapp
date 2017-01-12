@@ -1,0 +1,7 @@
+.idea/*
+out/*
+target/*
+*.iml
+filestore/*
+/target/
+/src/main/webapp/web/WEB-INF

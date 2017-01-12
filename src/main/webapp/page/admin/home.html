@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-1" style="height: 100%">
+            <div class="row">
+                <a class="btn btn-link" ng-class="{active: $state.includes('adminApp.home.deal.search')}" ui-sref="adminApp.home.deal.search">Deals</a>
+            </div>
+            <div class="row">
+                <a class="btn btn-link" ng-class="{active: $state.includes('adminApp.home.booking.search')}" ui-sref="adminApp.home.booking.search">Bookings</a>
+            </div>
+            <div class="row">
+                <a class="btn btn-link" ng-class="{active: $state.includes('adminApp.home.vendor.search')}" ui-sref="adminApp.home.vendor.search">Vendors</a>
+            </div>
+            <div class="row">
+                <a class="btn btn-link" ng-class="{active: $state.includes('adminApp.home.user.search')}" ui-sref="adminApp.home.user.search">Users</a>
+            </div>
+            <div class="row">
+                <a class="btn btn-link" ng-class="{active: $state.includes('adminApp.home.mailing')}" ui-sref="adminApp.home.mailing">Mailing</a>
+            </div>
+            <!--<div class="row">-->
+                <!--<a class="btn btn-link" ng-class="{active: $state.includes('adminApp.home.dealOffer.search')}" ui-sref="adminApp.home.dealOffer.search">DealOffers</a>-->
+            <!--</div>-->
+        </div>
+        <div class="col-sm-11 greyAndBorder">
+            <ui-view></ui-view>
+        </div>
+    </div>
+</div>

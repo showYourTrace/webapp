@@ -1,0 +1,30 @@
+<style type="text/css">
+    body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #eee;
+    }
+</style>
+<div class="container"> <!--ng-hide="auth.isLogged || !auth.doneLoading"-->
+    <div class="row">
+        <div class="col-sm-offset-3 col-sm-6">
+            <form role="form" ng-submit="loginMe();" form-autofill-fix="" onsubmit="return true;">
+                <div class="login-error" ng-show="wrongCredentials">
+                    <div class="alert alert-danger"><b>Error:</b>Login/password has not found</div>
+                </div>
+                <div class="login-error" ng-show="loginError()">
+                    <div class="alert alert-danger"><b>Ошибка:</b> {{loginErrorText()}}</div>
+                </div>
+                <h2 style="text-align: center">Enter login and password</h2>
+                <div class="col-sm-offset-3 col-sm-6">
+                    <input type="text" name="username" class="form-control" placeholder="Login" required autofocus ng-model="user.login">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required ng-model="user.pwd">
+                    <button class="btn btn-lg btn-primary btn-block" ng-disabled="working">Enter<i class="fa" ng-class="working ? 'fa-cog fa-spin' : 'fa-sign-in'"></i></button>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-3">
+            &nbsp;
+        </div>
+    </div>
+</div>

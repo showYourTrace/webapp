@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table class="table-pagination">
+    <tr>
+        <td>
+            Showed {{((state.page -1) * state.size) + 1}}
+            to {{(state.count > state.page * state.size ? state.page * state.size : state.count)}}
+            of {{state.count}} elements
+        </td>
+        <td><span class="blank"></span></td>
+        <td>
+            <pagination page="state.page"
+                        max-size="5"
+                        class="pull-right"
+                        boundary-links="true"
+                        rotate="false"
+                        items-per-page="state.size"
+                        total-items="state.count"
+                        previous-text="&lsaquo;"
+                        next-text="&rsaquo;"
+                        first-text="&laquo;"
+                        last-text="&raquo;"
+                        on-select-page="setPage(page)">
+            </pagination>
+        </td>
+        <td>
+            <select ng-model="state.size" ng-change="load()" ng-options="size for size in [5, 10, 25, 50, 100, 500]" class="form-control page-size">
+            </select>
+        </td>
+    </tr>
+</table>

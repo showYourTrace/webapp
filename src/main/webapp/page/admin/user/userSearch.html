@@ -1,0 +1,145 @@
+<div class="container-fluid">
+    <div class="row">
+        <label class="col-sm-4 control-label"><h3>Users</h3></label>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <button class="btn btn-link" ng-click="collapsed = !collapsed" style="width:100%;text-align:left">Filter</button>
+            <div class="row" style="margin-bottom: 10px;">
+                <form class="form-horizontal">
+                    <div class="col-sm-12" ng-hide="collapsed">
+                        <div class="row border" style="padding-top: 10px">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Username</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control" ng-model="filters.login" ng-enter="onEnter()" name="title" placeholder="Username" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">E-mail</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control" ng-model="filters.email" ng-enter="onEnter()" name="title" placeholder="E-mail" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Name</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control" ng-model="filters.name" ng-enter="onEnter()" name="title" placeholder="Name" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Second name</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control" ng-model="filters.secondName" ng-enter="onEnter()" name="title" placeholder="Second name" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Receiving promo only</label>
+                                    <div class="col-sm-8" align="left">
+                                        <input class="control-label" ng-model="filters.receivePromoOnly" type="checkbox">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                            </div>
+                            <div class="col-sm-4">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="list-inline gs-header-ul">
+                <li><button class="btn btn-default gs-btn" type="button" ng-click="openInsert()">Create</button></li>
+                <li><button class="btn btn-default gs-btn" type="button" ng-disabled="!canEdit()" ng-click="openEdit()">Edit</button></li>
+                <li><button class="btn btn-default gs-btn" type="button" ng-disabled="!canDelete()" ng-click="confirmDelete()">Delete</button></li>
+                <li><button class="btn btn-default gs-btn" type="button" ng-click="clearFilters()">Clear</button></li>
+                <li><button class="btn btn-default gs-btn" type="button" ng-click="load()" ng-disabled="searchDisabled()">Search</button></li>
+                <li><div ng-include="state.pagerTemplate"></div></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 scroll-width">
+            <table class="table table-bordered tablesorter-bootstrap tablesorter">
+                <thead>
+                <tr>
+                    <th style="max-width: 20px; width: 20px;">
+                    </th>
+                    <th style="max-width: 20px; width: 20px;">
+                        <div class="ng-binding" ng-click="setSort('receivePromoOnly')">
+                            P
+                            <i class="pull-right"
+                               ng-class="{'glyphicon glyphicon-chevron-down': canSort('receivePromoOnly', 'asc'), 'glyphicon glyphicon-chevron-up':canSort('receivePromoOnly', 'desc')}" title="Receive promo"></i>
+                        </div>
+                    </th>
+                    <th style="max-width: 20px; width: 20px;">
+                        <div class="ng-binding" ng-click="setSort('registeredUser')">
+                            R
+                            <i class="pull-right"
+                               ng-class="{'glyphicon glyphicon-chevron-down': canSort('registeredUser', 'asc'), 'glyphicon glyphicon-chevron-up':canSort('registeredUser', 'desc')}" title="Registered user"></i>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="ng-binding" ng-click="setSort('login')">
+                            Username
+                            <i class="pull-right"
+                               ng-class="{'glyphicon glyphicon-chevron-down': canSort('login', 'asc'), 'glyphicon glyphicon-chevron-up':canSort('login', 'desc')}"></i>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="ng-binding" ng-click="setSort('name')">
+                            Name
+                            <i class="pull-right"
+                               ng-class="{'glyphicon glyphicon-chevron-down': canSort('name', 'asc'), 'glyphicon glyphicon-chevron-up':canSort('name', 'desc')}"></i>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="ng-binding" ng-click="setSort('secondName')">
+                            Second name
+                            <i class="pull-right"
+                               ng-class="{'glyphicon glyphicon-chevron-down': canSort('secondName', 'asc'), 'glyphicon glyphicon-chevron-up':canSort('secondName', 'desc')}"></i>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="ng-binding" ng-click="setSort('email')">
+                            E-mail
+                            <i class="pull-right"
+                               ng-class="{'glyphicon glyphicon-chevron-down': canSort('email', 'asc'), 'glyphicon glyphicon-chevron-up':canSort('email', 'desc')}"></i>
+                        </div>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in state.model.itemArray" ng-click="setSelected(item)" ng-class="{'active':isSelected(item), 'gs-deleted': item.deleted}" ng-dblclick="openEdit(item)" gs-zebra-rows gs-index="{{$index}}">
+                    <td>
+                    </td>
+                    <td>
+                        <b ng-if="item.receivePromo == true" title="Receive promo">P</b>
+                    </td>
+                    <td>
+                        <b ng-if="item.registeredUser == true" title="Registered user">R</b>
+                        <b ng-if="item.registeredUser == false" title="Subscriber">S</b>
+                    </td>
+                    <td>
+                        {{item.login}}
+                    </td>
+                    <td>
+                        {{item.name}}
+                    </td>
+                    <td>
+                        {{item.secondName}}
+                    </td>
+                    <td>
+                        {{item.email}}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div id="main" class="container-fluid" ng-controller="MainPageController">
+    <!--Authorization and registration-->
+    <div class="row">
+        <div ng-show="loggedIn()">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3">
+                <span class="input-group-btn">
+                    <ul style="overflow:hidden;">
+                        <li class="active" style="display: inline;">
+                            <button class="btn btn-lg btn-link" >
+                                <i class="fa fa-lg fa-user"></i>
+                                <span>{{user.fullName}}</span>
+                            </button>
+                        </li>
+                        <li style="display: inline;">
+                            <button class="btn btn-lg btn-link" ng-controller="LogoutCtrl" ng-click="logoutMe()">
+                                <i class="fa fa-lg fa-sign-in"></i>
+                                <span>Logout</span>
+                            </button>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+
+            <div class="col-sm-2">
+                <ul>
+                    <li style="display: inline;">
+                        <button class="btn btn-lg btn-link" ng-click="$state.go('app.userBookingView')">
+                            <i class="fa fa-lg fa-shopping-cart"></i>
+                            <span>My bookings</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div ng-show="!loggedIn()">
+            <div class="col-sm-6"></div>
+            <div class="col-sm-2">
+                <span class="input-group-btn">
+                    <button class="btn btn-lg btn-link" ng-click="openLogin()">
+                        <i class="fa fa-lg fa-sign-in"></i>
+                        <span>Login</span>
+                    </button>
+                </span>
+                <span class="input-group-btn">
+                    <button class="btn btn-lg btn-link" ng-click="openRegister()">
+                        <i class="fa fa-lg fa-user-plus"></i>
+                        <span>Register</span>
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <span class="input-group-btn">
+                <button class="btn btn-lg btn-link">
+                    <i class="fa fa-lg fa-facebook-official"></i>
+                </button>
+                <button class="btn btn-lg btn-link">
+                    <i class="fa fa-lg fa-twitter-square"></i>
+                </button>
+                <button class="btn btn-lg btn-link">
+                    <i class="fa fa-lg fa-google-plus-square"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+
+    <!--Menu and global search-->
+    <div class="row" style="margin-top: 15px;">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-5">
+            <span class="input-group-btn">
+                <a href="#/mainDeal" class="btn btn-lg" ng-click="">
+                    <span>HOME</span>
+                </a>
+                <a href="#" class="btn btn-lg" ng-click="">
+                    <span>DEALS</span>
+                </a>
+                <a href="#" class="btn btn-lg" ng-click="">
+                    <span>FAQ</span>
+                </a>
+                <a href="#" class="btn btn-lg" ng-click="">
+                    <span>CONTACT</span>
+                </a>
+            </span>
+        </div>
+        <div class="col-sm-2">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter search string...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Search</button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <!--Categories and slideshow-->
+    <div class="row">
+        <div style="width: 100%;">
+            <div class="col-sm-2">
+                <div class="pull-right">
+                    <a href="#/searchDeal/1" class="btn btn-lg" ng-click="">
+                        <span>Travel deals</span>
+                    </a>
+                    <br>
+                    <a href="#/searchDeal/2" class="btn btn-lg" ng-click="">
+                        <span>Restaurant deals</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <ui-view></ui-view>
+            </div>
+        </div>
+    </div>
+</div>

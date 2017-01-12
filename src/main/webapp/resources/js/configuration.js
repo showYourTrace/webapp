@@ -1,0 +1,15 @@
+var app = angular.module('languagelearn.configuration', []);
+app.constant('PROJECT_NAME', 'languagelearn');
+app.constant('BASE_PATH', 'http://kot.noip.me:8080/languagelearn');
+app.constant('API_END_POINT', '/api/');
+app.constant('API_END_POINT_ADMIN', '/admin/api/');
+app.constant('IS_AUTH', '${auth}');
+app.constant('LOGIN_URL', '/web/login');
+app.constant('LOGIN_METHOD','POST');
+app.constant('CHECK_LOGIN_URL', '/api/auth');
+app.constant('CHECK_LOGIN_URL_ADMIN', '/admin/api/auth');
+app.constant('CHECK_LOGIN_METHOD','GET');
+app.constant('LOGOUT_URL','/api/auth');
+app.constant('LOGOUT_METHOD',  'DELETE');
+app.constant('IMG_STORE_PATH',  'http://kot.noip.me:8080/languagelearn/filestore/');
+app.constant('HOME_PAGE',  'http://localhost:8080/app/index.html#/allDeals');
