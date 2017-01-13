@@ -1,7 +1,7 @@
-package com.languagelearn.repository;
+package com.showyourtrace.repository;
 
-import com.languagelearn.model.User;
-import com.languagelearn.object.request.UserSearchRequest;
+import com.showyourtrace.model.User;
+import com.showyourtrace.object.request.UserSearchRequest;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Conjunction;
 import org.hibernate.criterion.Projections;

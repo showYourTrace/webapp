@@ -44,7 +44,7 @@
                 <!--<prop key="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</prop>-->
             </props>
         </property>
-        <property name="packagesToScan" value="com.languagelearn.model"/>
+        <property name="packagesToScan" value="com.showyourtrace.model"/>
     </bean>
 
     <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">

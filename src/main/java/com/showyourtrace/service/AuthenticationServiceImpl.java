@@ -1,11 +1,11 @@
-package com.languagelearn.service;
+package com.showyourtrace.service;
 
-import com.languagelearn.exception.ValidationException;
-import com.languagelearn.model.User;
-import com.languagelearn.object.encode.UserEncode;
-import com.languagelearn.object.request.AuthorizationRequest;
-import com.languagelearn.object.response.UserResponse;
-import com.languagelearn.repository.UserRepository;
+import com.showyourtrace.exception.ValidationException;
+import com.showyourtrace.model.User;
+import com.showyourtrace.object.encode.UserEncode;
+import com.showyourtrace.object.request.AuthorizationRequest;
+import com.showyourtrace.object.response.UserResponse;
+import com.showyourtrace.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

@@ -1,4 +1,4 @@
-package com.languagelearn.exception;
+package com.showyourtrace.exception;
 
 public enum ApplicationCode {
     SYSTEM("500", "Internal System error"),

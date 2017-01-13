@@ -1,4 +1,4 @@
-package com.languagelearn.exception;
+package com.showyourtrace.exception;
 
 public abstract class BaseWebApplicationException extends WebApplicationException {
     private final String errorCode;

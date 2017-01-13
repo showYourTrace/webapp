@@ -1,24 +1,24 @@
 // Main application modules
-var languagelearnAdmin = angular.module('languagelearnAdmin', ['ui.router', 'ui.bootstrap', 'restangular', 'ngRoute',
+var showyourtraceAdmin = angular.module('showyourtraceAdmin', ['ui.router', 'ui.bootstrap', 'restangular', 'ngRoute',
                                     'angularFileUpload', 'LocalStorageModule', 'directive.loading',
-    'languagelearn.configuration',
+    'showyourtrace.configuration',
     'com.htmlxprs.autocomplete.directives',
-    'languagelearnAdmin.deal',
-    'languagelearnAdmin.booking',
-    'languagelearnAdmin.vendor',
-    'languagelearnAdmin.user',
-    'languagelearnAdmin.mailing',
-    'languagelearnApp.authenticate',
-    'languagelearnApp.services'
+    'showyourtraceAdmin.deal',
+    'showyourtraceAdmin.booking',
+    'showyourtraceAdmin.vendor',
+    'showyourtraceAdmin.user',
+    'showyourtraceAdmin.mailing',
+    'showyourtraceApp.authenticate',
+    'showyourtraceApp.services'
 ]);
 
-languagelearnAdmin.filter('unsafe', ['$sce', function ($sce) {
+showyourtraceAdmin.filter('unsafe', ['$sce', function ($sce) {
     return function (val) {
         return $sce.trustAsHtml(val);
     };
 }]);
 
-languagelearnAdmin.config(function ($httpProvider, RestangularProvider, $stateProvider, $urlRouterProvider, $locationProvider, $parseProvider, $sceProvider, authenticateProvider, BASE_PATH, IS_AUTH, API_END_POINT_ADMIN) {
+showyourtraceAdmin.config(function ($httpProvider, RestangularProvider, $stateProvider, $urlRouterProvider, $locationProvider, $parseProvider, $sceProvider, authenticateProvider, BASE_PATH, IS_AUTH, API_END_POINT_ADMIN) {
     $sceProvider.enabled(false);
     RestangularProvider.setBaseUrl(BASE_PATH + API_END_POINT_ADMIN);
     //$parseProvider.unwrapPromises(true);
@@ -152,7 +152,7 @@ languagelearnAdmin.config(function ($httpProvider, RestangularProvider, $statePr
 
 });
 
-languagelearnAdmin.run(function ($rootScope, $state, $stateParams, $http, authenticate, CHECK_LOGIN_URL_ADMIN, CHECK_LOGIN_METHOD, BASE_PATH, IS_AUTH) {
+showyourtraceAdmin.run(function ($rootScope, $state, $stateParams, $http, authenticate, CHECK_LOGIN_URL_ADMIN, CHECK_LOGIN_METHOD, BASE_PATH, IS_AUTH) {
     $rootScope.apiResolve = 0;
     $rootScope.doingResolve = true;
     $rootScope.$state = $state;
@@ -204,12 +204,12 @@ languagelearnAdmin.run(function ($rootScope, $state, $stateParams, $http, authen
     });
 });
 
-languagelearnAdmin.controller('ErrorCtrl', function($rootScope, $scope, $state, Restangular, BASE_PATH) {
+showyourtraceAdmin.controller('ErrorCtrl', function($rootScope, $scope, $state, Restangular, BASE_PATH) {
 
 });
 
 
-languagelearnAdmin.controller('LogoutCtrl', function($rootScope, $scope, $state, $http, authenticate, LOGOUT_URL, LOGOUT_METHOD, BASE_PATH) {
+showyourtraceAdmin.controller('LogoutCtrl', function($rootScope, $scope, $state, $http, authenticate, LOGOUT_URL, LOGOUT_METHOD, BASE_PATH) {
     $scope.logoutMe = function () {
         var logoutPromise = $http({
             url: BASE_PATH + LOGOUT_URL,
@@ -222,7 +222,7 @@ languagelearnAdmin.controller('LogoutCtrl', function($rootScope, $scope, $state,
     };
 });
 
-languagelearnAdmin.controller('LoginCtrl', function ($rootScope, $scope, $state, $http, $timeout, authenticate, $modalStack, LOGIN_URL, LOGIN_METHOD, BASE_PATH) {
+showyourtraceAdmin.controller('LoginCtrl', function ($rootScope, $scope, $state, $http, $timeout, authenticate, $modalStack, LOGIN_URL, LOGIN_METHOD, BASE_PATH) {
     // loginService exposed and a new Object containing login user/pwd
     //$scope.auth = authenticateService;
     $scope.working = false;

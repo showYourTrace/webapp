@@ -1,6 +1,6 @@
-package com.languagelearn.service;
+package com.showyourtrace.service;
 
-import com.languagelearn.repository.UserRepository;
+import com.showyourtrace.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,8 +1,8 @@
-//package com.languagelearn.repository.delete;
+//package com.showyourtrace.repository.delete;
 //
-//import com.languagelearn.model.Deal;
-//import com.languagelearn.model.DealTag;
-//import com.languagelearn.repository.ModelRepository;
+//import com.showyourtrace.model.Deal;
+//import com.showyourtrace.model.DealTag;
+//import com.showyourtrace.repository.ModelRepository;
 //import org.hibernate.Criteria;
 //import org.hibernate.criterion.Restrictions;
 //import org.hibernate.sql.JoinType;

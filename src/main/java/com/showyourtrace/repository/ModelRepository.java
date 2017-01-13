@@ -1,6 +1,6 @@
-package com.languagelearn.repository;
+package com.showyourtrace.repository;
 
-import com.languagelearn.object.PageableRequest;
+import com.showyourtrace.object.PageableRequest;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Conjunction;
 import org.hibernate.criterion.MatchMode;

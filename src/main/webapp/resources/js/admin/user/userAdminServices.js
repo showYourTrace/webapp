@@ -1,4 +1,4 @@
-var app  = angular.module('languagelearnAdmin.user.services', ['restangular', 'languagelearn.configuration']);
+var app  = angular.module('showyourtraceAdmin.user.services', ['restangular', 'showyourtrace.configuration']);
 app.factory('userAdminRepository', function ($q, Restangular) {
     var obj = {};
 

@@ -1,8 +1,8 @@
-//package com.languagelearn.repository.delete;
+//package com.showyourtrace.repository.delete;
 //
-//import com.languagelearn.model.Booking;
-//import com.languagelearn.object.request.BookingSearchRequest;
-//import com.languagelearn.repository.ModelRepository;
+//import com.showyourtrace.model.Booking;
+//import com.showyourtrace.object.request.BookingSearchRequest;
+//import com.showyourtrace.repository.ModelRepository;
 //import org.hibernate.Criteria;
 //import org.hibernate.criterion.Conjunction;
 //import org.hibernate.criterion.Order;

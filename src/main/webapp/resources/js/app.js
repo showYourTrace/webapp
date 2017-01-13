@@ -1,18 +1,18 @@
 // Main application modules
-var languagelearnApp = angular.module('languagelearnApp', ['ui.router', 'ui.bootstrap', 'restangular', 'ngRoute', 'ngAnimate',
+var showyourtraceApp = angular.module('showyourtraceApp', ['ui.router', 'ui.bootstrap', 'restangular', 'ngRoute', 'ngAnimate',
                             'ngCookies', 'angularFileUpload', 'LocalStorageModule', 'directive.loading',
-    'languagelearn.configuration',
-    'languagelearnApp.authenticate',
-    'languagelearnApp.services'
+    'showyourtrace.configuration',
+    'showyourtraceApp.authenticate',
+    'showyourtraceApp.services'
 ]);
 
-languagelearnApp.filter('unsafe', ['$sce', function ($sce) {
+showyourtraceApp.filter('unsafe', ['$sce', function ($sce) {
     return function (val) {
         return $sce.trustAsHtml(val);
     };
 }]);
 
-languagelearnApp.config(function ($httpProvider, RestangularProvider, $stateProvider, $urlRouterProvider, $locationProvider, $parseProvider, $sceProvider, authenticateProvider, BASE_PATH, IS_AUTH, API_END_POINT) {
+showyourtraceApp.config(function ($httpProvider, RestangularProvider, $stateProvider, $urlRouterProvider, $locationProvider, $parseProvider, $sceProvider, authenticateProvider, BASE_PATH, IS_AUTH, API_END_POINT) {
     $sceProvider.enabled(false);
     RestangularProvider.setBaseUrl(BASE_PATH + API_END_POINT);
     //$parseProvider.unwrapPromises(true);
@@ -140,7 +140,7 @@ languagelearnApp.config(function ($httpProvider, RestangularProvider, $stateProv
 });
 
 
-languagelearnApp.run(function ($rootScope, $state, $stateParams, $http, authenticate, CHECK_LOGIN_URL, CHECK_LOGIN_METHOD, BASE_PATH, IS_AUTH) {
+showyourtraceApp.run(function ($rootScope, $state, $stateParams, $http, authenticate, CHECK_LOGIN_URL, CHECK_LOGIN_METHOD, BASE_PATH, IS_AUTH) {
     $rootScope.apiResolve = 0;
     $rootScope.doingResolve = true;
     $rootScope.$state = $state;
@@ -191,7 +191,7 @@ languagelearnApp.run(function ($rootScope, $state, $stateParams, $http, authenti
     });
 });
 
-languagelearnApp.controller('LogoutCtrl', function($rootScope, $scope, $state, $http, authenticate, LOGOUT_URL, LOGOUT_METHOD, BASE_PATH) {
+showyourtraceApp.controller('LogoutCtrl', function($rootScope, $scope, $state, $http, authenticate, LOGOUT_URL, LOGOUT_METHOD, BASE_PATH) {
     $scope.logoutMe = function () {
         var logoutPromise = $http({
             url: BASE_PATH + LOGOUT_URL,
@@ -205,7 +205,7 @@ languagelearnApp.controller('LogoutCtrl', function($rootScope, $scope, $state, $
 });
 
 
-languagelearnApp.controller('LoginCtrl', function ($rootScope, $scope, $modalInstance, $state, $http, $timeout, authenticate, mode,
+showyourtraceApp.controller('LoginCtrl', function ($rootScope, $scope, $modalInstance, $state, $http, $timeout, authenticate, mode,
                                                  $modal, $modalStack, $cookies, appServices, LOGIN_URL, LOGIN_METHOD, API_END_POINT, BASE_PATH) {
 
     $scope.working = false;
@@ -317,8 +317,8 @@ languagelearnApp.controller('LoginCtrl', function ($rootScope, $scope, $modalIns
 });
 
 
-languagelearnApp.controller('MainPageController', MainPageController);
-languagelearnApp.controller('ConfirmResultController', ConfirmResultController);
+showyourtraceApp.controller('MainPageController', MainPageController);
+showyourtraceApp.controller('ConfirmResultController', ConfirmResultController);
 
 
 //angular.module("template/popover/popover.html", []).run(["$templateCache", function ($templateCache) {

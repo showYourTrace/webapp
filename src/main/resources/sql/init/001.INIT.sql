@@ -1,6 +1,6 @@
-CREATE DATABASE languagelearndb CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE showyourtracedb CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-USE languagelearndb;
+USE showyourtracedb;
 
 CREATE TABLE IF NOT EXISTS `TAG` (
   `tag_id` BIGINT(20) NOT NULL AUTO_INCREMENT,

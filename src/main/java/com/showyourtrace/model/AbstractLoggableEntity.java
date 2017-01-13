@@ -1,4 +1,4 @@
-package com.languagelearn.model;
+package com.showyourtrace.model;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;

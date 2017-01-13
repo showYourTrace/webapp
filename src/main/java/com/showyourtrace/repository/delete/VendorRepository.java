@@ -1,8 +1,8 @@
-//package com.languagelearn.repository.delete;
+//package com.showyourtrace.repository.delete;
 //
-//import com.languagelearn.model.Vendor;
-//import com.languagelearn.object.request.VendorSearchRequest;
-//import com.languagelearn.repository.ModelRepository;
+//import com.showyourtrace.model.Vendor;
+//import com.showyourtrace.object.request.VendorSearchRequest;
+//import com.showyourtrace.repository.ModelRepository;
 //import org.hibernate.Criteria;
 //import org.hibernate.criterion.*;
 //import org.springframework.data.domain.PageImpl;

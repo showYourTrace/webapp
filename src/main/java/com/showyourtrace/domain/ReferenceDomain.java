@@ -1,4 +1,4 @@
-package com.languagelearn.domain;
+package com.showyourtrace.domain;
 
 import org.springframework.stereotype.Service;
 

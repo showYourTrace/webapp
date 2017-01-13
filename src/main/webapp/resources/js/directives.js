@@ -1,4 +1,4 @@
-languagelearnApp.directive('gsZebraRows', function() {
+showyourtraceApp.directive('gsZebraRows', function() {
     var rowColor = function(element, index, isSelected) {
         if (angular.isDefined(index) && index != null) {
             if (angular.isDefined(isSelected) && isSelected != null && isSelected === true) {
@@ -35,7 +35,7 @@ languagelearnApp.directive('gsZebraRows', function() {
 });
 
 // Execute on enter keypress event
-languagelearnApp.directive('ngEnter', function() {
+showyourtraceApp.directive('ngEnter', function() {
     return function(scope, element, attrs) {
         element.bind("keydown", function(event) {
             if(angular.isDefined(event) && angular.isDefined(event.which) && event.which === 13) {
@@ -53,7 +53,7 @@ languagelearnApp.directive('ngEnter', function() {
     };
 });
 
-languagelearnApp.directive('angTab', function() {
+showyourtraceApp.directive('angTab', function() {
     var showHidePanels = function(element, elemA) {
         if (angular.isDefined(elemA.attr('ang-ng-tab-index')) && elemA.attr('ang-ng-tab-index') != null) {
             var tabPanelIndex = elemA.attr('ang-ng-tab-index');
@@ -113,7 +113,7 @@ languagelearnApp.directive('angTab', function() {
     };
 });
 
-languagelearnApp.directive('ngThumb', ['$window', function($window) {
+showyourtraceApp.directive('ngThumb', ['$window', function($window) {
     var helper = {
         support: !!($window.FileReader && $window.CanvasRenderingContext2D),
         isFile: function(item) {

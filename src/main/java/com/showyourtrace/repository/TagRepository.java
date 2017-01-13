@@ -1,6 +1,6 @@
-package com.languagelearn.repository;
+package com.showyourtrace.repository;
 
-import com.languagelearn.model.Tag;
+import com.showyourtrace.model.Tag;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Order;

@@ -1,9 +1,9 @@
-package com.languagelearn.controller.core;
+package com.showyourtrace.controller.core;
 
-import com.languagelearn.exception.ErrorHandler;
-import com.languagelearn.exception.ErrorResponse;
-import com.languagelearn.object.response.UserResponse;
-import com.languagelearn.service.AuthenticationService;
+import com.showyourtrace.exception.ErrorHandler;
+import com.showyourtrace.exception.ErrorResponse;
+import com.showyourtrace.object.response.UserResponse;
+import com.showyourtrace.service.AuthenticationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

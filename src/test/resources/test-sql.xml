@@ -7,7 +7,7 @@
         http://www.springframework.org/schema/util     http://www.springframework.org/schema/util/spring-util-3.1.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-    <util:map id="testData" map-class="java.util.HashMap" key-type="com.languagelearn.test.sql.SqlTestData"
+    <util:map id="testData" map-class="java.util.HashMap" key-type="com.showyourtrace.test.sql.SqlTestData"
               value-type="java.lang.String">
         <entry key="CREATE_DATABASE">
             <value>

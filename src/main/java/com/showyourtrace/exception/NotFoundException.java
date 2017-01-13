@@ -1,4 +1,4 @@
-package com.languagelearn.exception;
+package com.showyourtrace.exception;
 
 public class NotFoundException extends WebApplicationException {
 

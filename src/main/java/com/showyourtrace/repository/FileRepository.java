@@ -1,6 +1,6 @@
-package com.languagelearn.repository;
+package com.showyourtrace.repository;
 
-import com.languagelearn.model.File;
+import com.showyourtrace.model.File;
 import org.springframework.stereotype.Repository;
 
 @Repository

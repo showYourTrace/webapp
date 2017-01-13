@@ -1,10 +1,10 @@
-package com.languagelearn.controller.core;
+package com.showyourtrace.controller.core;
 
-import com.languagelearn.exception.ErrorHandler;
-import com.languagelearn.exception.ErrorResponse;
-import com.languagelearn.object.request.AuthorizationRequest;
-import com.languagelearn.object.response.UserResponse;
-import com.languagelearn.service.AuthenticationService;
+import com.showyourtrace.exception.ErrorHandler;
+import com.showyourtrace.exception.ErrorResponse;
+import com.showyourtrace.object.request.AuthorizationRequest;
+import com.showyourtrace.object.response.UserResponse;
+import com.showyourtrace.service.AuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;

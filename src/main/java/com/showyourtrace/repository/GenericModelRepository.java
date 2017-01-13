@@ -1,6 +1,6 @@
-package com.languagelearn.repository;
+package com.showyourtrace.repository;
 
-import com.languagelearn.exception.NotFoundException;
+import com.showyourtrace.exception.NotFoundException;
 import org.hibernate.Criteria;
 import org.hibernate.Hibernate;
 import org.hibernate.Session;

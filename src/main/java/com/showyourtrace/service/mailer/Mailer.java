@@ -1,6 +1,6 @@
-package com.languagelearn.service.mailer;
+package com.showyourtrace.service.mailer;
 
-import com.languagelearn.util.ApplicationProperties;
+import com.showyourtrace.util.ApplicationProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

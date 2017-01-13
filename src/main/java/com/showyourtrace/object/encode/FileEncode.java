@@ -1,8 +1,8 @@
-package com.languagelearn.object.encode;
+package com.showyourtrace.object.encode;
 
-import com.languagelearn.model.File;
-import com.languagelearn.object.EncodeEntity;
-import com.languagelearn.object.response.FileResponse;
+import com.showyourtrace.model.File;
+import com.showyourtrace.object.EncodeEntity;
+import com.showyourtrace.object.response.FileResponse;
 import org.springframework.stereotype.Component;
 
 import java.util.Collection;

@@ -7,73 +7,61 @@
     <groupId>com.showyourtrace</groupId>
     <artifactId>showyourtrace</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
-
+    <packaging>jar</packaging>
+	<name>Show your trace</name>
+	<url>http://maven.apache.org</url>
 
     <properties>
         <spring.version>4.1.7.RELEASE</spring.version>
+		<tomcat.version>8.0.39</tomcat.version>
         <test.package>**/com/showyourtrace/test/**</test.package>
     </properties>
 
-    <build>
-        <finalName>showyourtrace</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.12.4</version>
-                <configuration>
-                    <skipTests>true</skipTests>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.1</version>
-                <configuration>
-                    <port>9080</port>
-                    <path>/${project.build.finalName}</path>
-                    <systemProperties>
-                        <log4j.configuration>file:./src/main/resources/log4j.xml</log4j.configuration>
-                    </systemProperties>
-                    <!--<dependencies>-->
-                        <!--<dependency>-->
-                            <!--<groupId>log4j</groupId>-->
-                            <!--<artifactId>log4j</artifactId>-->
-                            <!--<version>1.2.17</version>-->
-                        <!--</dependency>-->
-                        <!--<dependency>-->
-                            <!--<groupId>org.slf4j</groupId>-->
-                            <!--<artifactId>slf4j-api</artifactId>-->
-                            <!--<version>1.7.1</version>-->
-                        <!--</dependency>-->
-                        <!--<dependency>-->
-                            <!--<groupId>org.slf4j</groupId>-->
-                            <!--<artifactId>slf4j-log4j12</artifactId>-->
-                            <!--<version>1.7.1</version>-->
-                        <!--</dependency>-->
-                        <!--&lt;!&ndash; <dependency> <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId>-->
-                            <!--<version>5.1.25</version> </dependency> &ndash;&gt;-->
-                    <!--</dependencies>-->
-                </configuration>
-                <!-- <configuration> <url>http://localhost:8080/manager</url> <path>/</path>
-                    <username>admin</username> <password>admin</password> </configuration> -->
-            </plugin>
-
-        </plugins>
-    </build>
-
+	<build>
+    <finalName>embeddedTomcatSample</finalName>
+    <plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.3</version>
+			<configuration>
+				<source>1.8</source>
+				<target>1.8</target>
+			</configuration>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>2.12.4</version>
+			<configuration>
+				<skipTests>true</skipTests>
+			</configuration>
+		</plugin>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>appassembler-maven-plugin</artifactId>
+            <version>1.1.1</version>
+            <configuration>
+                <assembleDirectory>target</assembleDirectory>
+                <programs>
+                    <program>
+                        <mainClass>com.showyourtrace.Main</mainClass>
+                        <name>webapp</name>
+                    </program>
+                </programs>
+            </configuration>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>assemble</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+	</build>
+	
     <dependencies>
         <dependency>
             <groupId>org.json</groupId>
@@ -218,12 +206,12 @@
             <version>2.9.1</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>tomcat-catalina</artifactId>
-            <version>7.0.42</version>
-            <scope>provided</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.apache.tomcat</groupId>-->
+            <!--<artifactId>tomcat-catalina</artifactId>-->
+            <!--<version>7.0.42</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.thetransactioncompany</groupId>
             <artifactId>cors-filter</artifactId>
@@ -384,9 +372,39 @@
             <scope>test</scope>
         </dependency>
         <!--===================== TEST (END) =============================-->
+		
+		<!--===================== TOMCAT EMBEDDED =============================-->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-core</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-logging-juli</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jasper</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jasper-el</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jsp-api</artifactId>
+			<version>${tomcat.version}</version>
+		</dependency>
+		<!--===================== TOMCAT EMBEDDED (END) =============================-->
     </dependencies>
 
 </project>
-
-
-

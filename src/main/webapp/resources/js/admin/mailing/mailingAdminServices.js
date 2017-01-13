@@ -1,4 +1,4 @@
-var app  = angular.module('languagelearnAdmin.mailing.services', ['restangular', 'languagelearn.configuration']);
+var app  = angular.module('showyourtraceAdmin.mailing.services', ['restangular', 'showyourtrace.configuration']);
 app.factory('mailingAdminRepository', function ($q, Restangular) {
     return {
         sendPromoMail: function(msg) {

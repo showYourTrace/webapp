@@ -1,8 +1,8 @@
-var languagelearnApp  = angular.module('languagelearnApp.services', ['restangular', 'languagelearn.configuration']);
+var showyourtraceApp  = angular.module('showyourtraceApp.services', ['restangular', 'showyourtrace.configuration']);
 
-languagelearnApp.controller('OkCancelDialogCtrl', OkCancelDialogCtrl);
+showyourtraceApp.controller('OkCancelDialogCtrl', OkCancelDialogCtrl);
 
-languagelearnApp.factory('appServices', function ($q, $modal, Restangular, BASE_PATH) {
+showyourtraceApp.factory('appServices', function ($q, $modal, Restangular, BASE_PATH) {
 
     return {
         showSubscribe: function() {
@@ -87,7 +87,7 @@ languagelearnApp.factory('appServices', function ($q, $modal, Restangular, BASE_
     }
 });
 
-languagelearnApp.factory('fileRepository', function ($window, Restangular, API_END_POINT_ADMIN, FileUploader) {
+showyourtraceApp.factory('fileRepository', function ($window, Restangular, API_END_POINT_ADMIN, FileUploader) {
 
     return {
         uploader: function ($scope, url) {
@@ -144,7 +144,7 @@ languagelearnApp.factory('fileRepository', function ($window, Restangular, API_E
     }
 });
 
-languagelearnApp.factory('referenceService', function(dealAdminRepository) {
+showyourtraceApp.factory('referenceService', function(dealAdminRepository) {
     var selector = {
         select: function(referenceType) {
             switch(referenceType) {
@@ -168,7 +168,7 @@ languagelearnApp.factory('referenceService', function(dealAdminRepository) {
     }
 });
 
-languagelearnApp.factory('selectFilter', function(vendorAdminModalServices, userAdminModalServices) {
+showyourtraceApp.factory('selectFilter', function(vendorAdminModalServices, userAdminModalServices) {
     var selector = {
         select: function(filterType) {
             switch(filterType) {
@@ -211,7 +211,7 @@ languagelearnApp.factory('selectFilter', function(vendorAdminModalServices, user
     }
 });
 
-languagelearnApp.factory('templatesRepository', function (BASE_PATH) {
+showyourtraceApp.factory('templatesRepository', function (BASE_PATH) {
     return {
         pager: function() { return BASE_PATH + "/page/common/table-pagination.html" },
         vendorSearch: function() { return BASE_PATH + "/page/admin/vendor/vendorSearch.html" },
@@ -221,7 +221,7 @@ languagelearnApp.factory('templatesRepository', function (BASE_PATH) {
 
 
 // Set focus on input element
-languagelearnApp.factory('focusInput', function($timeout) {
+showyourtraceApp.factory('focusInput', function($timeout) {
     return function(id) {
         // timeout makes sure that is invoked after any other event has been triggered.
         // e.g. click events that need to run before the focus or
@@ -236,7 +236,7 @@ languagelearnApp.factory('focusInput', function($timeout) {
     };
 });
 
-languagelearnApp.factory('queueService', function($rootScope){
+showyourtraceApp.factory('queueService', function($rootScope){
     var queue = new createjs.LoadQueue(true);
 
     function loadManifest(manifest) {
@@ -256,7 +256,7 @@ languagelearnApp.factory('queueService', function($rootScope){
     }
 });
 
-languagelearnApp.animation('.fade-in-animation', function ($window) {
+showyourtraceApp.animation('.fade-in-animation', function ($window) {
     return {
         enter: function (element, done) {
             TweenMax.fromTo(element, 1, { opacity: 0}, {opacity: 1, onComplete: done});
@@ -268,7 +268,7 @@ languagelearnApp.animation('.fade-in-animation', function ($window) {
     };
 });
 
-languagelearnApp.directive('couponslider', function(IMG_STORE_PATH) {
+showyourtraceApp.directive('couponslider', function(IMG_STORE_PATH) {
     return {
         restrict: 'AE',
         replace: true,

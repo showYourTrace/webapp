@@ -1,7 +1,7 @@
-package com.languagelearn.service;
+package com.showyourtrace.service;
 
-import com.languagelearn.object.request.AuthorizationRequest;
-import com.languagelearn.object.response.UserResponse;
+import com.showyourtrace.object.request.AuthorizationRequest;
+import com.showyourtrace.object.response.UserResponse;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 

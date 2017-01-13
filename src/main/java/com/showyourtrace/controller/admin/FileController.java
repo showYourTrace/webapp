@@ -1,10 +1,10 @@
-package com.languagelearn.controller.admin;
+package com.showyourtrace.controller.admin;
 
-import com.languagelearn.domain.FileDomain;
-import com.languagelearn.exception.ErrorHandler;
-import com.languagelearn.exception.ErrorResponse;
-import com.languagelearn.object.response.FileResponse;
-import com.languagelearn.util.ApplicationProperties;
+import com.showyourtrace.domain.FileDomain;
+import com.showyourtrace.exception.ErrorHandler;
+import com.showyourtrace.exception.ErrorResponse;
+import com.showyourtrace.object.response.FileResponse;
+import com.showyourtrace.util.ApplicationProperties;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

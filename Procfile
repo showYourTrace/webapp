@@ -1,1 +1,1 @@
-web: sh target/showyourtrace
+web: sh target/bin/webapp

@@ -1,4 +1,4 @@
-angular.module('com.htmlxprs.autocomplete.directives',['languagelearn.configuration']).directive('autoComplete',['$http', 'BASE_PATH',function($http, BASE_PATH){
+angular.module('com.htmlxprs.autocomplete.directives',['showyourtrace.configuration']).directive('autoComplete',['$http', 'BASE_PATH',function($http, BASE_PATH){
     return {
         restrict:'AE',
         scope:{

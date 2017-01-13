@@ -1,7 +1,7 @@
-package com.languagelearn.service;
+package com.showyourtrace.service;
 
-import com.languagelearn.model.User;
-import com.languagelearn.repository.UserRepository;
+import com.showyourtrace.model.User;
+import com.showyourtrace.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

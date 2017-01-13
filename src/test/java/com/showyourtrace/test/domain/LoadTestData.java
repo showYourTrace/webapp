@@ -1,4 +1,4 @@
-package com.languagelearn.test.domain;
+package com.showyourtrace.test.domain;
 
 public class LoadTestData {
 

@@ -1,9 +1,9 @@
-package com.languagelearn.controller.admin;
+package com.showyourtrace.controller.admin;
 
-import com.languagelearn.exception.ErrorHandler;
-import com.languagelearn.exception.ErrorResponse;
-import com.languagelearn.repository.UserRepository;
-import com.languagelearn.service.mailer.Mailer;
+import com.showyourtrace.exception.ErrorHandler;
+import com.showyourtrace.exception.ErrorResponse;
+import com.showyourtrace.repository.UserRepository;
+import com.showyourtrace.service.mailer.Mailer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

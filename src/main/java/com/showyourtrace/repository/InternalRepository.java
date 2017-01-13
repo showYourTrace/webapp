@@ -1,4 +1,4 @@
-package com.languagelearn.repository;
+package com.showyourtrace.repository;
 
 import java.io.Serializable;
 import java.util.Collection;

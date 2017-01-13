@@ -43,16 +43,16 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
 
-    <servlet>
-        <servlet-name>imgServlet</servlet-name>
-        <servlet-class>com.languagelearn.FileServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
+    <!--<servlet>-->
+        <!--<servlet-name>imgServlet</servlet-name>-->
+        <!--<servlet-class>com.showyourtrace.FileServlet</servlet-class>-->
+        <!--<load-on-startup>1</load-on-startup>-->
+    <!--</servlet>-->
 
-    <servlet-mapping>
-        <servlet-name>imgServlet</servlet-name>
-        <url-pattern>/filestore/*</url-pattern>
-    </servlet-mapping>
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>imgServlet</servlet-name>-->
+        <!--<url-pattern>/filestore/*</url-pattern>-->
+    <!--</servlet-mapping>-->
     <servlet-mapping>
         <servlet-name>appServlet</servlet-name>
         <url-pattern>/</url-pattern>

@@ -1,8 +1,8 @@
-//package com.languagelearn.repository.delete;
+//package com.showyourtrace.repository.delete;
 //
-//import com.languagelearn.model.Order;
-//import com.languagelearn.model.User;
-//import com.languagelearn.repository.ModelRepository;
+//import com.showyourtrace.model.Order;
+//import com.showyourtrace.model.User;
+//import com.showyourtrace.repository.ModelRepository;
 //import org.hibernate.Criteria;
 //import org.hibernate.criterion.Restrictions;
 //import org.hibernate.transform.DistinctRootEntityResultTransformer;

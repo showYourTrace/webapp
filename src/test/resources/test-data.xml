@@ -14,7 +14,7 @@
 
     <!--<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">-->
         <!--<property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
-        <!--<property name="url" value="jdbc:mysql://kot.noip.me:3306/languagelearndbtest"/>-->
+        <!--<property name="url" value="jdbc:mysql://kot.noip.me:3306/showyourtracedbtest"/>-->
         <!--<property name="username" value="vavilen"/>-->
         <!--<property name="password" value="harlavradok"/>-->
     <!--</bean>-->
@@ -48,7 +48,7 @@
                 <!--<prop key="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</prop>-->
             </props>
         </property>
-        <property name="packagesToScan" value="com.languagelearn.model"/>
+        <property name="packagesToScan" value="com.showyourtrace.model"/>
     </bean>
 
     <jdbc:initialize-database data-source="dataSource">

@@ -1,10 +1,10 @@
-package com.languagelearn.domain;
+package com.showyourtrace.domain;
 
-import com.languagelearn.model.File;
-import com.languagelearn.object.encode.FileEncode;
-import com.languagelearn.object.response.FileResponse;
-import com.languagelearn.repository.FileRepository;
-import com.languagelearn.util.TableLogger;
+import com.showyourtrace.model.File;
+import com.showyourtrace.object.encode.FileEncode;
+import com.showyourtrace.object.response.FileResponse;
+import com.showyourtrace.repository.FileRepository;
+import com.showyourtrace.util.TableLogger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

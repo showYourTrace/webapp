@@ -6,10 +6,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
-<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="languagelearnAdmin">
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="showyourtraceAdmin">
 <head>
   <%--<base href="/">--%>
-  <title>languagelearn admin console</title>
+  <title>showyourtrace admin console</title>
   <meta http-equiv="X-UA-Compatible" content="IE=8" />
   <meta name="viewport" content="width=device-width, initial-scale=0.8">
   <meta name="description" content="">
@@ -49,7 +49,7 @@
 </div>
 
 <div id="mydiv" loading>
-  <img src="/languagelearn/resources/img/loading.gif" class="ajax-loader"/>
+  <img src="/showyourtrace/resources/img/loading.gif" class="ajax-loader"/>
 </div>
 
 <script src="<c:url value="/resources/lib/jquery-1.11.3.js"/>?v=<%=version%>"></script>

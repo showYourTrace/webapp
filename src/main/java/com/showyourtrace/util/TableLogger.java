@@ -1,8 +1,8 @@
-package com.languagelearn.util;
+package com.showyourtrace.util;
 
-import com.languagelearn.model.AbstractLoggableEntity;
-import com.languagelearn.model.User;
-import com.languagelearn.service.ContextUser;
+import com.showyourtrace.model.AbstractLoggableEntity;
+import com.showyourtrace.model.User;
+import com.showyourtrace.service.ContextUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

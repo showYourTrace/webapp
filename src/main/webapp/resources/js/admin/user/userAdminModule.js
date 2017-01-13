@@ -1,4 +1,4 @@
-var app  = angular.module('languagelearnAdmin.user', ['languagelearn.configuration', 'languagelearnAdmin.user.services']);
+var app  = angular.module('showyourtraceAdmin.user', ['showyourtrace.configuration', 'showyourtraceAdmin.user.services']);
 app.config(function ($stateProvider, $urlRouterProvider, BASE_PATH) {
     $stateProvider
         .state('adminApp.home.user', {

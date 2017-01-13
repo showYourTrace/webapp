@@ -1,4 +1,4 @@
-var app = angular.module('languagelearnApp.authenticate', []);
+var app = angular.module('showyourtraceApp.authenticate', []);
 
 app.provider('authenticate', function() {
     var config = {

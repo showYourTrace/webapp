@@ -1,6 +1,6 @@
-var app = angular.module('languagelearn.configuration', []);
-app.constant('PROJECT_NAME', 'languagelearn');
-app.constant('BASE_PATH', 'http://kot.noip.me:8080/languagelearn');
+var app = angular.module('showyourtrace.configuration', []);
+app.constant('PROJECT_NAME', 'showyourtrace');
+app.constant('BASE_PATH', 'http://kot.noip.me:8080/showyourtrace');
 app.constant('API_END_POINT', '/api/');
 app.constant('API_END_POINT_ADMIN', '/admin/api/');
 app.constant('IS_AUTH', '${auth}');
@@ -11,5 +11,5 @@ app.constant('CHECK_LOGIN_URL_ADMIN', '/admin/api/auth');
 app.constant('CHECK_LOGIN_METHOD','GET');
 app.constant('LOGOUT_URL','/api/auth');
 app.constant('LOGOUT_METHOD',  'DELETE');
-app.constant('IMG_STORE_PATH',  'http://kot.noip.me:8080/languagelearn/filestore/');
+app.constant('IMG_STORE_PATH',  'http://kot.noip.me:8080/showyourtrace/filestore/');
 app.constant('HOME_PAGE',  'http://localhost:8080/app/index.html#/allDeals');
