@@ -13,10 +13,10 @@
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://kot.noip.me:3306/languagelearndb"/>
-        <property name="username" value="vavilen"/>
-        <property name="password" value="harlavradok"/>
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgres://wsvmjpuinftote:2d7ae95b301467f45d1d3328d793348b3b44cd823887c21852acc8542073b013@ec2-54-247-189-141.eu-west-1.compute.amazonaws.com:5432/d8vc6amsclmebb"/>
+        <property name="username" value="wsvmjpuinftote"/>
+        <property name="password" value="2d7ae95b301467f45d1d3328d793348b3b44cd823887c21852acc8542073b013"/>
     </bean>
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
@@ -24,7 +24,7 @@
         <property name="hibernateProperties">
             <props>
                 <!-- SQL dialect -->
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</prop>
 
                 <!-- Echo all executed SQL to stdout -->
                 <prop key="hibernate.show_sql">true</prop>
