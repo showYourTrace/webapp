@@ -59,6 +59,25 @@
                 </execution>
             </executions>
         </plugin>
+        <plugin>
+            <artifactId>maven-antrun-plugin</artifactId>
+            <version>1.8</version>
+            <executions>
+                <execution>
+                    <phase> package </phase>
+                    <configuration>
+                        <target>
+                            <copy file="src/main/resources/data-heroku.xml"
+                                  tofile="target/classes/data.xml"
+                                  overwrite="true"/>
+                        </target>
+                    </configuration>
+                    <goals>
+                        <goal>run</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
     </plugins>
 	</build>
 	

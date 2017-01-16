@@ -3,7 +3,9 @@ var showyourtraceApp = angular.module('showyourtraceApp', ['ui.router', 'ui.boot
                             'ngCookies', 'angularFileUpload', 'LocalStorageModule', 'directive.loading',
     'showyourtrace.configuration',
     'showyourtraceApp.authenticate',
-    'showyourtraceApp.services'
+    'showyourtraceApp.services',
+
+    'showyourtraceApp.search'
 ]);
 
 showyourtraceApp.filter('unsafe', ['$sce', function ($sce) {
@@ -26,7 +28,7 @@ showyourtraceApp.config(function ($httpProvider, RestangularProvider, $stateProv
 
     authenticateProvider.setConfig({
         unauthorizedPage: 'public.error',
-        targetPage: 'app.mainDealView',
+        targetPage: 'app.search',
         loginPage: IS_AUTH ? 'public.login' : 'public.402'
     });
 
@@ -109,7 +111,7 @@ showyourtraceApp.config(function ($httpProvider, RestangularProvider, $stateProv
                     var url = config.url;
 
                     if (status == 401 || status == 403) {
-                        //$location.path(IS_AUTH ? '/login' : '402');  // Redirection to login page
+                        $location.path(IS_AUTH ? '/login' : '402');  // Redirection to login page
                     } else {
                         console.error("Response " + method + " on " + url + " failed with status " + status);
                     }
@@ -157,7 +159,10 @@ showyourtraceApp.run(function ($rootScope, $state, $stateParams, $http, authenti
         if($state.current.name == 'public.login') {
             $state.go(authenticate.targetPage);
         }
+
         $rootScope.doingResolve = false;
+        $state.go(authenticate.targetPage);
+
     }, function(error) {
         //$rootScope.user = { role: accessLevels.ANONYMOUS };
         $rootScope.doingResolve = false;

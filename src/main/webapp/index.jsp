@@ -75,6 +75,9 @@
 <script src="<c:url value='/resources/js/authenticate.js'/>?v=<%=version%>"></script>
 <script src="<c:url value="/resources/js/directives.js"/>?v=<%=key%>"></script>
 
+<script src="<c:url value="/resources/js/public/searchController.js"/>?v=<%=key%>"></script>
+<script src="<c:url value="/resources/js/public/searchModule.js"/>?v=<%=key%>"></script>
+
 
 <!--[if lte IE 9]>
 <script src='<c:url value="/resources/lib/respond.min.js"/>?v=<%=version%>'></script>
