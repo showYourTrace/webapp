@@ -5,3 +5,4 @@ target/*
 filestore/*
 /target/
 /src/main/webapp/web/WEB-INF
+/src/main/webapp/resources/js/configuration_heroku.js
